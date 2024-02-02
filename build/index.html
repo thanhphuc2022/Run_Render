@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <style>
+        .space {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap">
@@ -284,13 +289,14 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- <div class="footer-copyright">&copy; 2019 ThanhPhuc, all rights reserved</div> -->
-                    <div class="footer-copyright">&copy; 2019 ThanhPhuc</div>
+                    <div class="footer-copyright">&copy; <span class="space" id="currentYear"></span> Thanh Phuc</div>
                 </div>
             </div>
         </footer>
     </div>
-
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
     <script src="dist/js/main.min.js"></script>
 </body>
 </html>
